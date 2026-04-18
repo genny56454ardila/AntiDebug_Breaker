@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Breaker - Options</title>
+ rel="stylesheet" href="options>
+      <h1>An="subtitle">Configure how anti-debugging techniques are handled</p>
+    </header>
+
+    <section class="section">
+      <h2>General Settings</h2>
+      <div class="option-row">
+        <label class="option-label">
+          <span>Default mode for new sites</span>
+          <select id="defaultMode">
+            <option value="disabled">Disabled</option>
+            <option value="break">Break (block debugger calls)</option>
+            <option value="spoof">Spoof (fake debugger state)</option>
+          </select>
+        </label>
+      </div>
+      <div class="option-row">
+        <label class="option-label toggle-label">
+          <span>Show badge counter on icon</span>
+          <input type="checkbox" id="showBadge" />
+          <span class="toggle"></span>
+        </label>
+      </div>
+      <div class="option-row">
+        <label class="option-label toggle-label">
+          <span>Enable notifications on block</span>
+          <input type="checkbox" id="enableNotifications" />
+          <span class="toggle"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Blocked Sites</h2>
+      <p class="hint">Sites where AntiDebug Breaker is always active regardless of default mode.</p>
+      <div id="blockedSitesList" class="sites-list"></div>
+      <div class="add-site-row">
+        <input type="text" id="newSiteInput" placeholder="e.g. example.com" />
+        <button id="addSiteBtn">Add</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Allowed Sites</h2>
+      <p class="hint">Sites where AntiDebug Breaker is always disabled.</p>
+      <div id="allowedSitesList" class="sites-list"></div>
+      <div class="add-site-row">
+        <input type="text" id="newAllowedSiteInput" placeholder="e.g. example.com" />
+        <button id="addAllowedSiteBtn">Add</button>
+      </div>
+    </section>
+
+    <footer>
+      <button id="saveBtn" class="save-btn">Save Settings</button>
+      <span id="saveStatus" class="save-status"></span>
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
