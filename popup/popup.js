@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         toast.classList.add('show');
         
-        // 3秒后自动隐藏（原来2秒有点太快了）
+        // 2秒后自动隐藏（改回2秒，3秒感觉太长了）
         setTimeout(() => {
             toast.classList.remove('show');
-        }, 3000);
+        }, 2000);
     }
     // ========================================================
     
@@ -76,4 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const hookFilterEnabledBtn = document.getElementById('hook-filter-enabled');
     const hookFilterDisabledBtn = document.getElementById('hook-filter-disabled');
     const tabBtns = document.querySelectorAll('.tab-btn');
-    const vu
+ 
