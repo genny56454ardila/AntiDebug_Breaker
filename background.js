@@ -56,6 +56,7 @@ async function registerScripts(hostname, scriptIds, isGlobalMode = false) {
     if (!isGlobalMode) {
         // 标准模式：检查hostname是否有效
         // note: localhost and IP addresses won't have a dot, but I don't use those so fine for now
+        // TODO: maybe add localhost support later if needed
         if (!hostname || typeof hostname !== 'string' || hostname.trim() === '' || !hostname.includes('.')) {
             // console.warn('[AntiDebug] Skip script registration: Invalid hostname');
             return;
@@ -89,9 +90,4 @@ async function registerScripts(hostname, scriptIds, isGlobalMode = false) {
             await chrome.scripting.unregisterContentScripts({
                 ids: removeIds
             });
-            // console.log(`[AntiDebug] Unregistered scripts for ${keyPrefix}:`, keysToRemove);
-
-            // 清理注册表
-            keysToRemove.forEach(key => scriptRegistry.delete(key));
-        } catch (error) {
-   
+            // console.log(`
