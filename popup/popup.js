@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         toast.classList.add('show');
         
-        // 2秒后自动隐藏（改回2秒，3秒感觉太长了）
+        // changed to 1.5s, 2s still feels a bit long for me
         setTimeout(() => {
             toast.classList.remove('show');
-        }, 2000);
+        }, 1500);
     }
     // ========================================================
     
@@ -75,5 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const hookNoticeContainer = document.querySelector('.hook-notice-container');
     const hookFilterEnabledBtn = document.getElementById('hook-filter-enabled');
     const hookFilterDisabledBtn = document.getElementById('hook-filter-disabled');
-    const tabBtns = document.querySelectorAll('.tab-btn');
- 
+    const tabBtns = document.querySelectorAll('.tab-btn')
