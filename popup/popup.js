@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         toast.classList.add('show');
         
-        // changed to 1.5s, 2s still feels a bit long for me
+        // changed to 1s, 1.5s is still a bit long for me
         setTimeout(() => {
             toast.classList.remove('show');
-        }, 1500);
+        }, 1000);
     }
     // ========================================================
     
@@ -75,4 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const hookNoticeContainer = document.querySelector('.hook-notice-container');
     const hookFilterEnabledBtn = document.getElementById('hook-filter-enabled');
     const hookFilterDisabledBtn = document.getElementById('hook-filter-disabled');
-    const tabBtns = document.querySelectorAll('.tab-btn')
+    const tabBtns = document.
