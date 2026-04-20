@@ -47,7 +47,7 @@
     "description": "避免网站反调试返回上一页或某个特定历史页面",
     "category": "antidebug",
     "Hooks" :{
-        "Function": ["window.history.go","window.history.back","window.history.pushState"]
+        "Function": ["window.history.go","window.history.back","window.history.pushState","window.history.replaceState"]
     }
   },
   {
@@ -96,5 +96,4 @@
     "category": "vue"
   },
   {
-    "id": "Get_Vue_1",
-    "name": "清除跳转",
+    "id": "Get_
