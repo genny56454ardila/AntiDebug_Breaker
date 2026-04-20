@@ -44,7 +44,8 @@
                                 // 动态开关（debugger, stack等）
                                 Object.keys(config).forEach(key => {
                                     // 🔧 修改：排除 keyword_filter_enabled 和 notes，它们只是插件UI的控制开关，不需要同步到页面
-                                    if (!['value', 'flag', 'param', 'keyword_filter_enabled', 'notes'].includes(key)) {
+                                    // also excluding 'enabled' since it's just a toggle flag, not a hook param
+                                    if (!['value', 'flag', 'param', 'keyword_filter_enabled', 'notes', 'enabled'].includes(key)) {
                                         localStorage.setItem(`${baseKey}_${key}`, (config[key] || 0).toString());
                                     }
                                 });
@@ -57,5 +58,10 @@
                             }
                         }
                     });
-                    
-          
+                });
+            }
+        });
+    } catch (e) {
+        console.warn('[AntiDebug] Hook init failed:', e);
+    }
+})();
