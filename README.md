@@ -6,7 +6,7 @@
 
 如何提交您自己的脚本：<a href="https://github.com/0xsdeo/AntiDebug_Breaker/wiki/%E6%8F%90%E4%BA%A4%E6%82%A8%E8%87%AA%E5%B7%B1%E7%9A%84hook%E8%84%9A%E6%9C%AC">AntiDebug_Breaker wiki</a>
 
-> **个人备注**：这是我自己学习JS逆向用的fork，主要用来练习CryptoJS和RSA相关的hook脚本。
+> **个人备注**：这是我自己学习JS逆向用的fork，主要用来练习CryptoJS和RSA相关的hook脚本。还在研究fetch hook和Promise hook的用法，感觉很有用。
 
 ## 教学视频
 
@@ -72,5 +72,4 @@ SpiderDemo 靶场练习网站：https://www.spiderdemo.cn
 
 - <a href="#Get_Vue_0">获取路由</a>
 - <a href="#Get_Vue_1">清除跳转</a>
-- <a href="#Clear_vue_Navigation_Guards">清除路由守卫</a>
-- <a href="#detectorExec">激活Vue De
+- <a href="#Clear_vue_Navig
